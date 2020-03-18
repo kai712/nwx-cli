@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  //全局变量
+  "globals": {
+    "__DEV__": true,
+    "__WECHAT__": true,
+    "__ALIPAY__": true,
+    "App": true,
+    "Page": true,
+    "Component": true,
+    "Behavior": true,
+    "wx": true,
+    "getApp": true,
+    "getCurrentPages": true
+  },
+  "rules": {
+    // allow paren-less arrow functions
+    "arrow-parens": 0,
+    // allow async-await
+    "generator-star-spacing": 0,
+    "space-before-function-paren": 0,
+    "no-return-assign": 0,
+    "no-useless-escape": 0
+  }
+}
