@@ -69,6 +69,7 @@ const install = () => {
       for (let item of components) {
         shell.exec(`cp -rf node_modules/weui-miniprogram/miniprogram_dist/${item} weui_components/`, {silent: true})
       }
+      shell.exec(`mv weui_components src/`, {silent: true})
       console.log(chalk.green(`\n install ${components} success！！`))
     })
 }

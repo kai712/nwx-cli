@@ -23,6 +23,12 @@ module.exports = {
     }
   },
   context: resolve('src'),
+  watch: true,
+  watchOptions: {
+      ignored: /node_modules/,
+      aggregateTimeout: 300,  //文件变动后多久发起构建，越大越好
+      poll: 1000,  //每秒询问次数，越小越好
+  },
   entry: './app.js',
   output: {
     path: resolve('dist'),
