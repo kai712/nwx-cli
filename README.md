@@ -19,6 +19,8 @@ nwx-cli 是一款能提供给你极致开发体验的微信小程序 CLI 工具�
 - [x] 自动指定项目路径，并开启小程序调试工具
 - [x] 获取预览二维码
 - [x] 上传代码
+- [x] 通过nwx create命令自动创建page、component模板
+- [x] 可按需引入官方weui基础组件库
 
 ## 开始
 - 新建一个项目根目录
@@ -98,6 +100,27 @@ nwx init
 ```
 nwx open
 ```
+
+#### 创建page、component文件
+
+在**当前目录**下创建文件夹并生成对应的js、json、scss、wxml模板文件
+
+```
+nwx create <name> <type>
+```
+
+- name: 组件或者页面名称，必填
+- type: page或者component，必填
+
+#### 按需引入官方组件库中的组件
+
+在**项目根目录**下运行下面的命令，然后选择需要按需引入的组件，可选择多个，组件会保存到当前目录下的weui_components文件夹中，文件夹不存在自动创建。
+
+```
+nwx install
+```
+
+[官方组件库地址](https://developers.weixin.qq.com/miniprogram/dev/extended/weui/)
 
 #### 预览小程序
 

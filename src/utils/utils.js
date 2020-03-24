@@ -27,10 +27,20 @@ const readConfig = () => {
     console.log(chalk.red(`\n 请到项目目录下运行该命令！`))
     process.exit()
   }
+}
 
+// 判断文件或文件夹存不存在
+const fsExistsSync = path => {
+  try{
+      fs.accessSync(path,fs.F_OK);
+  }catch(e){
+      return false;
+  }
+  return true;
 }
 
 module.exports = {
   rewriteFile,
-  readConfig
+  readConfig,
+  fsExistsSync
 }

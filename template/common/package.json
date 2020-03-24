@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/app.js",
   "scripts": {
-    "start": "webpack --watch --progress & nwx open",
+    "start": "webpack --watch & nwx open",
     "build": "cross-env NODE_ENV=production BUILD_TYPE=release webpack && gulp minify",
     "lint": "eslint --fix --ext .js src/"
   },
@@ -35,7 +35,7 @@
     "sass-loader": "^7.1.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
-    "wx-entry-webpack-plugin": "^1.0.0",
+    "wx-entry-webpack-plugin": "^1.1.0",
     "wx-runtime-webpack-plugin": "^1.0.0"
   }
 }

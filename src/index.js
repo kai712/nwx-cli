@@ -6,6 +6,8 @@ const { init } = require('./commands/init')
 const { open } = require('./commands/open')
 const { preview } = require('./commands/preview')
 const { upload } = require('./commands/upload')
+const { create } = require('./commands/create')
+const { install } = require('./commands/install')
 const { readConfig } = require('./utils/utils')
 
 // 设置版本
@@ -31,12 +33,12 @@ program
 
 // 预览
 program
-.command('preview')
-.description('预览小程序')
-.action(() => {
-  let config = readConfig()
-  preview(config)
-})
+  .command('preview')
+  .description('预览小程序')
+  .action(() => {
+    let config = readConfig()
+    preview(config)
+  })
 
 // 上传代码
 program
@@ -45,6 +47,22 @@ program
   .action(() => {
     let config = readConfig()
     upload(config)
+  })
+
+// 创建component、page模板文件
+program
+  .command('create <name> <type>')
+  .description('创建component、page模板文件')
+  .action((name, type) => {
+    create(name, type)
+  })
+
+// 使用微信小程序原生组件
+program
+  .command('install')
+  .description('使用微信小程序原生组件')
+  .action(() => {
+    install()
   })
 
 
